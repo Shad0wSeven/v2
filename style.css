@@ -18,6 +18,13 @@ a {
     margin: -5px;
 }
 
+
+h3 a {
+    padding: 15px;
+    margin: 10px;
+    font-size: 3rem;
+    text-decoration: none;
+}
 a:hover {
     text-decoration: none;
     transition-duration: 0s;
@@ -25,7 +32,14 @@ a:hover {
     
 }
 
-i {
-    padding: 20px;
-    font-size: 4rem;
-}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    /* background-color: red; */
+    color: #000;
+    font-size: 1.2rem;
+    padding-bottom: 20px;
+    text-align: center;
+  }
