@@ -11,11 +11,14 @@ body {
 }
 
 a {
-    text-decoration: underline;
     color: #000;
     border-radius: 5px;
     padding: 5px;
     margin: -5px;
+    text-decoration: underline;
+    text-decoration-color: black;
+    text-underline-offset: 0.1em;
+    transition: text-decoration-color 300ms, text-underline-offset 300ms, background-color 100ms;
 }
 
 
@@ -24,11 +27,13 @@ h3 a {
     margin: 10px;
     font-size: 3rem;
     text-decoration: none;
+    
 }
 a:hover {
-    text-decoration: none;
-    transition-duration: 0s;
+    /* text-decoration: none; */
     background-color: rgba(207, 207, 207, 0.5);
+    text-decoration-color: transparent;
+    text-underline-offset: 0.3em;
     
 }
 
@@ -42,4 +47,10 @@ a:hover {
     font-size: 1rem;
     padding-bottom: 20px;
     text-align: center;
+  }
+
+  a:hover i {
+    background-image: linear-gradient(to right, #373B44 , #4286f4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
