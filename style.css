@@ -1,6 +1,6 @@
 body {
     color: #000;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Roboto,sans-serif;
     text-align: center;
     padding-top: 10%;
     padding-left: 20%;
@@ -46,11 +46,37 @@ a:hover {
     color: #000;
     font-size: 1rem;
     padding-bottom: 20px;
-    text-align: center;
-  }
+}
 
-  a:hover i {
-    background-image: linear-gradient(to right, #373B44 , #4286f4);
+a:hover i {
+    /* background-image: linear-gradient(to right, #000000, #000);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+    -webkit-text-fill-color: transparent; */
+    color: rgb(100, 100, 100);
+}
+
+@media only screen and (max-width: 1200px) {
+    body {
+        /* background-color: red; */
+        padding: 50px;
+        font-size: 1.1rem;
+    }
+
+}
+
+
+@media only screen and (max-width: 600px) {
+    body {
+        /* background-color: lightblue; */
+        padding: 10px;
+        font-size: 1rem;
+        text-align: left;
+    }
+    footer {
+        padding: 10px;
+    }
+    a i {
+        font-size: 30px;
+
+    }
+}
