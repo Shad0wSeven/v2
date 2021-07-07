@@ -6,8 +6,6 @@ body {
     padding-left: 20%;
     padding-right: 20%;
     font-size: 1.3rem;
-    
-
 }
 
 a {
@@ -21,6 +19,9 @@ a {
     transition: text-decoration-color 300ms, text-underline-offset 300ms, background-color 100ms;
 }
 
+img {
+    max-width: min(500px, 80%);
+}
 
 h3 a {
     padding: 15px;
@@ -30,11 +31,9 @@ h3 a {
     
 }
 a:hover {
-    /* text-decoration: none; */
     background-color: rgba(207, 207, 207, 0.5);
     text-decoration-color: transparent;
     text-underline-offset: 0.3em;
-    
 }
 
 .footer {
@@ -42,39 +41,38 @@ a:hover {
     left: 0;
     bottom: 0;
     width: 100%;
-    /* background-color: red; */
     color: #000;
     font-size: 1rem;
     padding-bottom: 20px;
 }
 
 a:hover i {
-    /* background-image: linear-gradient(to right, #000000, #000);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
+    
     color: rgb(100, 100, 100);
+
 }
 
 @media only screen and (max-width: 1200px) {
+    
     body {
-        /* background-color: red; */
         padding: 50px;
         font-size: 1.1rem;
     }
 
 }
 
-
 @media only screen and (max-width: 600px) {
+    
     body {
-        /* background-color: lightblue; */
         padding: 10px;
         font-size: 1rem;
         text-align: left;
     }
+
     footer {
         padding: 10px;
     }
+
     a i {
         font-size: 30px;
 
