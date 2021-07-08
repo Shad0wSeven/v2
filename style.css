@@ -1,3 +1,5 @@
+
+
 body {
     color: #000;
     font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Roboto,sans-serif;
@@ -13,10 +15,7 @@ a {
     border-radius: 5px;
     padding: 5px;
     margin: -5px;
-    text-decoration: underline;
-    text-decoration-color: black;
-    text-underline-offset: 0.1em;
-    transition: text-decoration-color 300ms, text-underline-offset 300ms, background-color 100ms;
+
 }
 
 img {
@@ -30,11 +29,7 @@ h3 a {
     text-decoration: none;
     
 }
-a:hover {
-    background-color: rgba(207, 207, 207, 0.5);
-    text-decoration-color: transparent;
-    text-underline-offset: 0.3em;
-}
+
 
 .footer {
     position: fixed;
@@ -52,11 +47,45 @@ a:hover i {
 
 }
 
+@supports (background: paint(something)) {
+    a {
+        text-decoration: underline;
+        text-decoration-color: black;
+        transition-duration: 0.2s;
+
+    }
+  
+    a:hover,
+    a:focus {
+      text-decoration-color: transparent;
+      font-weight: 700;
+      background-color: rgba(207, 207, 207, 0.5);
+    }
+  }
+
+
+@supports not (background: paint(something)) {
+    a {
+        text-decoration: underline;
+        text-decoration-color: black;
+        text-underline-offset: 0.1em;
+        transition: text-decoration-color 300ms, text-underline-offset 300ms, background-color 100ms;
+    }
+  
+    a:hover,
+    a:focus {
+      text-decoration-color: transparent;
+      text-underline-offset: 0.3em;
+      background-color: rgba(207, 207, 207, 0.5);
+    }
+  }
+
 @media only screen and (max-width: 1200px) {
     
     body {
         padding: 50px;
         font-size: 1.1rem;
+        
     }
 
 }
