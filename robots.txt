@@ -1,0 +1,4 @@
+Sitemap: https://www.shad0w.ml/sitemap.xml
+
+User-agent: Googlebot
+Allow: /
