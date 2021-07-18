@@ -1,7 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+    }
+    :root {
+        --dark-color: rgb(236, 236, 236);
+        --light-color: #121212;
+        --highlight-color: rgba(61, 61, 61, 0.5);
+        --select-color: #fff;
+        --footer-color: rgb(83, 83, 83);
+    }
+    img {
+        visibility: hidden;
+    }
+}
+
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --dark-color: #121212;
+        --light-color: #fff;
+        --highlight-color: rgba(207, 207, 207, 0.5);
+        --select-color: rgb(100, 100, 100);
+        --footer-color: rgb(214, 214, 214);
+    }
+    img {
+        visibility: visible;
+    }
+}
+
+
 body {
-    color: #000;
+    color: var(--dark-color);
     font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Roboto,sans-serif;
     text-align: center;
     padding-top: 10%;
@@ -11,7 +42,7 @@ body {
 }
 
 a {
-    color: #000;
+    color: var(--dark-color);
     border-radius: 5px;
     padding: 5px;
     margin: -5px;
@@ -36,21 +67,21 @@ h3 a {
     left: 0;
     bottom: 0;
     width: 100%;
-    color: rgb(175, 175, 175);
+    color: var(--footer-color);
     font-size: 1rem;
     padding-bottom: 20px;
 }
 
 a:hover i {
     
-    color: rgb(100, 100, 100);
+    color: var(--select-color);
 
 }
 
 @supports (background: paint(something)) {
     a {
         text-decoration: underline;
-        text-decoration-color: black;
+        text-decoration-color: var(--dark-color);
         transition-duration: 0.2s;
 
     }
@@ -59,7 +90,7 @@ a:hover i {
     a:focus {
       text-decoration-color: transparent;
       font-weight: 700;
-      background-color: rgba(207, 207, 207, 0.5);
+      background-color: var(--highlight-color);
     }
   }
 
@@ -67,7 +98,7 @@ a:hover i {
 @supports not (background: paint(something)) {
     a {
         text-decoration: underline;
-        text-decoration-color: black;
+        text-decoration-color: var(--dark-color);
         text-underline-offset: 0.1em;
         transition: text-decoration-color 300ms, text-underline-offset 300ms, background-color 100ms;
     }
@@ -76,7 +107,7 @@ a:hover i {
     a:focus {
       text-decoration-color: transparent;
       text-underline-offset: 0.3em;
-      background-color: rgba(207, 207, 207, 0.5);
+      background-color: var(--highlight-color);
     }
   }
 
