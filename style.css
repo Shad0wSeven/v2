@@ -43,11 +43,12 @@ body {
 
 a {
     color: var(--dark-color);
-    border-radius: 5px;
-    padding: 5px;
-    margin: -3px;
-	margin-top: -5px;
-	margin-bottom: -5px;
+    /* border-radius: 5px; */
+    padding-left: 3px;
+	padding-right: 3px;
+	padding-bottom: 3px;
+	margin: -2px;
+
 
 }
 
@@ -76,43 +77,51 @@ h3 a {
 
 a:hover i {
     
-    color: var(--select-color);
+    /* color: var(--select-color); */
 
 }
 
-@supports (background: paint(something)) {
-    a {
-        text-decoration: underline;
-        text-decoration-color: var(--dark-color);
-        transition-duration: 0.2s;
 
-    }
-  
-    a:hover,
-    a:focus {
-      text-decoration-color: transparent;
-      /* font-weight: 700; */
-	  color: var(--light-color);
-      background-color: var(--dark-color);
-    }
-  }
+a {
+	text-decoration: underline;
+	text-decoration-color: var(--dark-color);
+	/* transition-duration: 0.1s; */
+
+}
+
+a:hover {
+	text-decoration-color: transparent;
+	/* font-weight: 700; */
+	color: var(--light-color);
+	background-color: var(--dark-color);
+}
+a:focus {
 
 
-@supports not (background: paint(something)) {
-    a {
-        text-decoration: underline;
-        text-decoration-color: var(--dark-color);
-        text-underline-offset: 0.1em;
-        transition: text-decoration-color 300ms, text-underline-offset 300ms, background-color 100ms;
-    }
-  
-    a:hover,
-    a:focus {
-      text-decoration-color: transparent;
-      text-underline-offset: 0.3em;
-      background-color: var(--highlight-color);
-    }
-  }
+	animation: blinker 0.13s steps(2, end) 3;
+	color: var(--light-color);
+	background-color: var(--dark-color);
+}
+
+@keyframes blinker {
+	0% {
+		color: var(--dark-color);
+		background-color: var(--light-color);
+		animation-timing-function: steps(1, end);
+	}
+	50% {
+		color: var(--light-color);
+		background-color: var(--dark-color);
+		animation-timing-function: steps(1, end);
+	}
+	100% {
+		color: var(--dark-color);
+		background-color: var(--light-color);
+		animation-timing-function: steps(1, end);
+	}
+}
+
+
 
 @media only screen and (max-width: 1200px) {
     
