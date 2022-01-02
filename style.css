@@ -33,7 +33,7 @@
 
 body {
     color: var(--dark-color);
-    font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Inter,sans-serif;
+	font-family: -apple-system,BlinkMacSystemFont,'Inter', sans-serif;
     text-align: center;
     padding-top: 10%;
     padding-left: 20%;
@@ -45,7 +45,9 @@ a {
     color: var(--dark-color);
     border-radius: 5px;
     padding: 5px;
-    margin: -5px;
+    margin: -3px;
+	margin-top: -5px;
+	margin-bottom: -5px;
 
 }
 
@@ -89,8 +91,9 @@ a:hover i {
     a:hover,
     a:focus {
       text-decoration-color: transparent;
-      font-weight: 700;
-      background-color: var(--highlight-color);
+      /* font-weight: 700; */
+	  color: var(--light-color);
+      background-color: var(--dark-color);
     }
   }
 
@@ -138,3 +141,12 @@ a:hover i {
 
     }
 }
+
+::selection {
+	background: var(--dark-color); /* WebKit/Blink Browsers */
+	color: var(--light-color)
+  }
+  ::-moz-selection {
+	background: #ffb7b7; /* Gecko Browsers */
+  }
+  
