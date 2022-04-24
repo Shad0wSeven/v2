@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+
 @media (prefers-color-scheme: dark) {
     body {
         background-color: #121212;
@@ -161,3 +162,39 @@ a:focus {
   }
   
 
+/* Tooltips */
+
+.tooltip {
+position:relative; /* making the .tooltip span a container for the tooltip text */
+
+}
+.tooltip:before {
+content: attr(data-text); /* here's the magic */
+position:absolute;
+
+/* vertically center */
+top:0;
+margin-left: -3px;
+margin-top: 30px;
+/* transform: translateX(-25%); */
+font-size: medium;
+font-weight: bold;
+/* move to right */
+left: 0;
+/* margin-left:15px; and add a small left margin */
+
+/* basic styles */
+/* width:200px; */
+padding:10px;
+background: var(--dark-color); /* WebKit/Blink Browsers */
+color: var(--light-color);
+text-align:center;
+z-index: 99;
+
+display:none; /* hide by default */
+}
+
+/* MAKE IT WORK!!!!! */
+/* .tooltip:hover:before {
+	display:block;
+  } */
