@@ -32,10 +32,16 @@
     }
 }
 
+h1 {
+	text-decoration: none;
+}
 
 body {
     color: var(--dark-color);
-	font-family: -apple-system,BlinkMacSystemFont,'Inter', sans-serif;
+	/* font-family: -apple-system,BlinkMacSystemFont,'Inter', sans-serif; */
+	font-weight: 400;
+	font-family:  Helvetica, 'Inter', sans-serif;
+	letter-spacing: -1px;
     text-align: center;
     padding-top: 10%;
     padding-left: 20%;
@@ -68,7 +74,7 @@ h3 a {
 
 
 .footer {
-    position: fixed;
+    /* position: fixed; */
     left: 0;
     bottom: 0;
     width: 100%;
@@ -123,6 +129,12 @@ a:focus {
 	}
 }
 
+.backmarker {
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 20px;
+}
 
 
 @media only screen and (max-width: 1200px) {
@@ -198,3 +210,4 @@ display:none; /* hide by default */
 /* .tooltip:hover:before {
 	display:block;
   } */
+
