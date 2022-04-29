@@ -49,6 +49,11 @@ body {
     font-size: 1.3rem;
 }
 
+.container {
+	max-width: 800px;
+	margin: auto;
+}
+
 a {
     color: var(--dark-color);
     /* border-radius: 5px; */
@@ -211,3 +216,39 @@ display:none; /* hide by default */
 	display:block;
   } */
 
+
+.surround {
+	border: 2px solid var(--dark-color);
+	padding-left: 20px;
+	margin-bottom: 10px;
+}
+
+.surround a {
+	text-decoration: none;
+}
+
+.surround a h2 {
+	margin-top: 0;
+	
+}
+
+.surround a p {
+	margin-bottom: 0;
+}
+
+.surround:hover{
+	background: var(--dark-color);
+	color: var(--light-color);
+}
+
+.surround:hover > a {
+	color: var(--light-color);
+	background: none;
+	
+}
+
+.surround a:focus {
+	animation: none;
+	color: inherit;
+	background: none;
+}
