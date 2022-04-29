@@ -107,6 +107,7 @@ a:hover {
 	/* font-weight: 700; */
 	color: var(--light-color);
 	background-color: var(--dark-color);
+	
 }
 a:focus {
 
@@ -237,7 +238,9 @@ display:none; /* hide by default */
 }
 
 .surround:hover{
-	background: var(--dark-color);
+	/* background: var(--dark-color);
+	 */
+	 backdrop-filter: invert(100%);
 	color: var(--light-color);
 }
 
