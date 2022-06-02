@@ -44,7 +44,8 @@ body {
 	color: var(--dark-color);
 	/* font-family: -apple-system,BlinkMacSystemFont,'Inter', sans-serif; */
 	font-weight: 400;
-	font-family: 'Helvetica', 'Inter', 'IBM Plex Sans',  sans-serif;
+	font-family:  "Helvetica Neue", "HelveticaNeue", -apple-system, BlinkMacSystemFont, Inter, "Segoe UI", "Helvetica", Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
 	letter-spacing: -1px;
 	text-align: center;
 	padding-top: 10%;
