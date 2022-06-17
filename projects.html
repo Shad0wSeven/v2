@@ -23,6 +23,7 @@
 
 <body>
 	<div class="container">
+    <div id="circle"></div>
   <div class="backmarker"><a href="/index.html">back</a></div>
   <h1 style="font-size: 2.5rem;"><a href="index.html" style="text-decoration: none;">projects</a></h1>
   
@@ -36,17 +37,19 @@
   
   <!-- Stuff -->
   <div style="text-align: left;">
-	<div class="surround">
-		<a href="https://sqrd.ml/">
+	<div class="surround" onmouseover="circle.innerHTML='sqrd.ml';"
+  onmouseout="circle.innerHTML='';">
+		<a href="https://sqrd.ml/" >
 			<h2 style="font-size: 1.8rem;">Unikorn</h2>
 			<p>Condensed Matter Physics Project. . .
 				<br><br><b>ISEF 2022 #1 Best in Category<br>CIA Award<br>King Abdualaziz Foundation Award<br>GSDSEF Grand Prize Winner<br>CSEF 4th Place<br>Armed Forces Communication Award First Place<br>Patent Pending</b>
 			</p>
 		</a>
 	</div>
-	<div class="surround">
-		<a href="#">
-			<h2 style="font-size: 1.8rem;">Name TBD</h2>
+	<div class="surround" onmouseover="circle.innerHTML='vacumsat.ml';"
+    onmouseout="circle.innerHTML='';">
+		<a href="https://vacumsat.ml" >
+			<h2 style="font-size: 1.8rem;" >Name TBD</h2>
 			<p>Rocket Themed Project. . .</p>
 		</a>
 	</div>
@@ -54,15 +57,17 @@
 
 
 
-	<div class="surround">
-		<a href="https://github.com/Shad0wSeven/Luna">
+	<div class="surround" onmouseover="circle.innerHTML='github.com';"
+  onmouseout="circle.innerHTML='';">
+		<a href="https://github.com/Shad0wSeven/Luna" >
 			<h2 style="font-size: 1.8rem;">LUNA</h2>
 			<p>Project to help beam internet to faraway places through the use of beam-expanded lasers. <br><br><b>MIT Think Scholars 2021 Semifinalist.</b></p>
 		</a>
 	</div>
 
-	<div class="surround">
-		<a href="https://github.com/Shad0wSeven/Optix">
+	<div class="surround" onmouseover="circle.innerHTML='youtube.com';"
+  onmouseout="circle.innerHTML='';">
+		<a href="https://www.youtube.com/watch?v=mEhHr-37JqA" >
 			<h2 style="font-size: 1.8rem;">Optix</h2>
 			<p>ML + CV + Natural Language + Surround Sound = explain the world.
 				<br><br><b>2022 Congressional App Challenge Winner</b>
@@ -71,7 +76,8 @@
 		</a>
 	</div>
 
-	<div class="surround">
+	<div class="surround" onmouseover="circle.innerHTML='univers.vercel.app';"
+  onmouseout="circle.innerHTML='';">
 		<a href="https://univers.vercel.app">
 			<h2 style="font-size: 1.8rem;">Univers</h2>
 			<p>Space Themed Project. . .</p>
@@ -79,7 +85,8 @@
 	</div>
 
 
-	<div class="surround">
+	<div class="surround" onmouseover="circle.innerHTML='github.com';"
+  onmouseout="circle.innerHTML='';">
 		<a href="https://github.com/Shad0wSeven/genAI">
 			<h2 style="font-size: 1.8rem;">GenAI</h2>
 			<p>Using input reconstruction methods, as well as tested ML networks, constructing a network that was able to not only have high accuracy, but also identify disease creators</p>
@@ -150,6 +157,15 @@
   <!-- Icons -->
 
   <script src="script.js"></script>
+  <script>
+    
+    let circle = document.getElementById('circle');
+const onMouseMove = (e) =>{
+  circle.style.left = e.pageX + 'px';
+  circle.style.top = e.pageY + 'px';
+}
+document.addEventListener('mousemove', onMouseMove);
+  </script>
 </div>
 
 </body>

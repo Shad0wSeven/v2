@@ -51,7 +51,7 @@ body {
 	padding-top: 10%;
 	padding-left: 20%;
 	padding-right: 20%;
-	font-size: 1.3rem;
+	font-size: 1.4rem;
 }
 
 .container {
@@ -59,16 +59,7 @@ body {
 	margin: auto;
 }
 
-a {
-	color: var(--dark-color);
-	/* border-radius: 5px; */
-	padding-left: 3px;
-	padding-right: 3px;
-	padding-bottom: 3px;
-	margin: -2px;
 
-
-}
 
 img {
 	max-width: min(500px, 80%);
@@ -93,19 +84,25 @@ h3 a {
 	padding-bottom: 20px;
 }
 
-a:hover i {
-
-	/* color: var(--select-color); */
-
-}
-
-
 a {
+	color: var(--dark-color);
+	/* border-radius: 5px; */
+	padding-left: 3px;
+	padding-right: 3px;
+	padding-bottom: 3px;
+	margin: -2px;
+	text-underline-offset: 2px;
 	text-decoration: underline;
 	text-decoration-color: var(--dark-color);
 	/* transition-duration: 0.1s; */
+	z-index: -99;
+
 
 }
+
+
+
+
 
 a:hover {
 	text-decoration-color: transparent;
@@ -116,8 +113,6 @@ a:hover {
 }
 
 a:focus {
-
-
 	animation: blinker 0.13s steps(2, end) 3;
 	color: var(--light-color);
 	background-color: var(--dark-color);
@@ -155,7 +150,7 @@ a:focus {
 
 	body {
 		padding: 50px;
-		font-size: 1.1rem;
+		font-size: 1.2rem;
 
 	}
 
@@ -165,7 +160,7 @@ a:focus {
 
 	body {
 		padding: 10px;
-		font-size: 1rem;
+		/* font-size: 1rem; */
 		text-align: left;
 	}
 
@@ -208,10 +203,11 @@ a:focus {
 	top: 0;
 	margin-left: -3px;
 	margin-top: 30px;
-	/* transform: translateX(-25%); */
+
 	font-size: medium;
 	font-weight: bold;
-	/* move to right */
+
+	
 	left: 0;
 	/* margin-left:15px; and add a small left margin */
 
@@ -221,6 +217,7 @@ a:focus {
 	background: var(--dark-color);
 	/* WebKit/Blink Browsers */
 	color: var(--light-color);
+	/* color: red; */
 	text-align: center;
 	z-index: 99;
 
@@ -228,10 +225,24 @@ a:focus {
 	/* hide by default */
 }
 
+#circle {
+	position:absolute;
+	transform:translate(0%,-120%);
+
+	color: var(--light-color);
+	font-weight: bold;
+	font-size: 1.2rem;
+	background-color: var(--dark-color);
+
+	/* padding: 5px; */
+	/* font-size: 1rem; */
+	z-index: 99;
+}
+
 /* MAKE IT WORK!!!!! */
-/* .tooltip:hover:before {
-	display:block;
-  } */
+.tooltip:hover:before {
+	/* display:block; */
+  }
 
 
 .surround {
