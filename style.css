@@ -154,9 +154,14 @@ a:focus {
 
 	}
 
+
 }
 
 @media only screen and (max-width: 600px) {
+
+	#circle {
+		display: none;
+	}
 
 	body {
 		padding: 10px;
