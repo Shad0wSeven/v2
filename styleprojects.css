@@ -22,17 +22,11 @@
 }
 
 
-
-
-
-
-
-
-
 .wrapper {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 }
+
 
 .wrapper div {
 	height: max(33.333vw, 33.333vh);
@@ -40,11 +34,16 @@
 	/* background-color: red; */
 	border: 3px solid white;
 	color: transparent;
-	transition-duration: 0.3s;
+	
 	background-size: cover;
 	display: table; 
 	padding: 20px;
 	
+}
+
+
+.wrapper div:hover {
+	transition-duration: 0.3s;
 }
 
 .wrapper div p {

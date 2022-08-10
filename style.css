@@ -163,6 +163,13 @@ a:focus {
 		font-size: 1.2rem;
 
 	}
+	.wrapper {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	.wrapper div {
+		height: 50vw;
+	}
 
 
 }
@@ -186,6 +193,13 @@ a:focus {
 	a i {
 		font-size: 30px;
 
+	}
+	.wrapper {
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+	.wrapper div {
+		height: 100vw;
 	}
 }
 
