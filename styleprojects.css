@@ -2,9 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 
-@media (prefers-color-scheme: dark) {
 
-}
 
 
 @media (prefers-color-scheme: light) {
@@ -32,7 +30,7 @@
 	height: max(33.333vw, 33.333vh);
 	/* line-height: 33.333vh; */
 	/* background-color: red; */
-	border: 3px solid white;
+	margin: 3px;
 	color: transparent;
 	
 	background-size: cover;
@@ -57,7 +55,7 @@
 	text-decoration-color: transparent;
 }
 .wrapper div:hover > p a {
-	text-decoration-color: black;
+	text-decoration-color: var(--dark-color);
 }
 
 .wrapper div:hover > p a:hover {
@@ -65,44 +63,44 @@
 }
 
 .wrapper div:hover {
-	color: black;
-	background-color: white;
+	color: var(--dark-color);
+	background-color: var(--light-color);
 	background-blend-mode: lighten;
 }
 
 .wrapper div:hover > p a {
-	color: black;
+	color: var(--dark-color);
 }
 
 
 
 
 #one {
-	background-image: url(/1.jpg);
+	background-image: url(/1.webp);
 
 }
 #two {
-	background-image: url(/2.jpeg);
+	background-image: url(/2.webp);
 
 }
 #three {
-	background-image: url(/3.jpeg);
+	background-image: url(/3.webp);
 
 }
 #four {
-	background-image: url(/4.jpg);
+	background-image: url(/4.webp);
 }
 #five {
-	background-image: url(/5.png);
+	background-image: url(/5.webp);
 }
 #six {
-	background-image: url(/6.jpeg);
+	background-image: url(/6.webp);
 }
 #seven {
-	background-image: url("https://picsum.photos/1600");
+	background-image: url(/7.webp);
 }
 #eight {
-	background-image: url("https://picsum.photos/1700");
+	background-image: url(/8.webp);
 }
 #nine {
 	background-image: url("https://picsum.photos/1800");
@@ -120,7 +118,7 @@
 
 #underpt {
 	position: fixed;
-	color: white;
+	color: var(--light-color);
 	top: 0;
 	left: 0;
 	text-align: left;
@@ -131,4 +129,20 @@
 }
 
 
+
+@media (prefers-color-scheme: dark) {
+	/* :root {
+		--dark-color: rgb(236, 236, 236);
+		--light-color: #121212;
+		--highlight-color: rgba(61, 61, 61, 0.5);
+		--select-color: #fff;
+		--footer-color: rgb(83, 83, 83);
+	}
+	.wrapper div:hover {
+		background-blend-mode: darken;
+	}
+	.wrapper div {
+		margin: 0px;
+	} */
+}
 
