@@ -51,7 +51,7 @@ body {
 	/* font-family: -apple-system,BlinkMacSystemFont,'Inter', sans-serif; */
 	font-weight: 400;
 	font-family:  "Outfit", "Futura", "Helvetica Neue", "HelveticaNeue", -apple-system, BlinkMacSystemFont, Inter, "Segoe UI", "Helvetica", Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-
+	font-size: 1.4rem;
 	letter-spacing: -1px;
 	text-align: center;
 	padding-top: 10%;
@@ -166,7 +166,7 @@ a:focus {
 
 	body {
 		padding: 50px;
-		font-size: 1.2rem;
+		font-size: 1.3rem;
 
 	}
 	.wrapper {
