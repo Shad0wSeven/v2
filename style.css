@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 
 @font-face {
 	font-family: monocraft;
@@ -50,7 +50,7 @@ body {
 	color: var(--dark-color);
 	/* font-family: -apple-system,BlinkMacSystemFont,'Inter', sans-serif; */
 	font-weight: 400;
-	font-family:  "Outfit", "Futura", "Helvetica Neue", "HelveticaNeue", -apple-system, BlinkMacSystemFont, Inter, "Segoe UI", "Helvetica", Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-family:  "DM Sans","Outfit", "Futura", "Helvetica Neue", "HelveticaNeue", -apple-system, BlinkMacSystemFont, Inter, "Segoe UI", "Helvetica", Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	font-size: 1.4rem;
 	/* letter-spacing: -1px; */
 	text-align: center;
