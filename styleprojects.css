@@ -41,7 +41,7 @@
 
 
 .wrapper div:hover {
-	transition-duration: 0.3s;
+	/* transition-duration: 0.3s; */
 }
 
 .wrapper div p {

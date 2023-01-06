@@ -29,10 +29,14 @@
   <!-- <div id="underpt">projects </div>
   <div id="home"><a href="/index.html">home</a></div> -->
 <div class="container">
+  <div id="circle"></div>
   <div class="backmarker"><a href="/index.html">back</a></div>
   <h1 style="font-size: 2.5rem;"><a href="index.html" style="text-decoration: none;">projects</a></h1>
-  <p><a href="https://shad0w-blog.vercel.app/">blog</a>  <a href="projects.html">projects</a>  <a href="https://storage-pearl.vercel.app/resumev3.pdf">resume</a> <a href="https://x-sqrd.github.io">unikorn</a> <a href="https://photos-ayushnayak.vercel.app">photos</a></p>
-</div>
+  <p><a href="https://shad0w-blog.vercel.app/" onmouseover="circle.innerHTML='blog.ayushnayak.me';"
+    onmouseout="circle.innerHTML='';">blog</a>  <a href="projects.html">projects</a>  <a href="https://storage-pearl.vercel.app/resumev3.pdf" onmouseover="circle.innerHTML='files.ayushnayak.me';"
+    onmouseout="circle.innerHTML='';">resume</a> <a href="https://x-sqrd.github.io" onmouseover="circle.innerHTML='x-sqrd.github.io';"
+    onmouseout="circle.innerHTML='';">unikorn</a> <a href="https://photos-ayushnayak.vercel.app" onmouseover="circle.innerHTML='photos.ayushnayak.me';"
+    onmouseout="circle.innerHTML='';">photos</a></p></div>
   <div class="wrapper">
     <div id="one" href="#one">
       <p><b>unikorn</b><br>building the fastest transistors in the world. <br>
@@ -124,5 +128,14 @@
 
   <p style="padding-bottom: 180px; margin-top: 40px;"><i>Last Updated August 9th, 2022. <br>Check out my  <a href="https://github.com/Shad0wSeven/">GitHub Repository</a> for the latest.</i></p>
 </div>
+<script>
+    
+  let circle = document.getElementById('circle');
+const onMouseMove = (e) =>{
+circle.style.left = e.pageX + 'px';
+circle.style.top = e.pageY + 'px';
+}
+document.addEventListener('mousemove', onMouseMove);
+</script>
 </body>
 </html>
