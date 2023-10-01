@@ -5,6 +5,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fragment+Mono&display=swap');
 @font-face {
 	font-family: monocraft;
 	src: url(/Monocraft.woff);
@@ -52,6 +54,7 @@ h1,  .backmarker {
 h1 {
 	font-size: 5rem;
 	margin-bottom: 0px;
+	letter-spacing: -5px;
 }
 .nav {
 	margin-top: 10px;
@@ -61,7 +64,7 @@ body {
 	color: var(--dark-color);
 	/* font-family: -apple-system,BlinkMacSystemFont,'Inter', sans-serif; */
 	font-weight: 400;
-	font-family:  'Outfit', "Helvetica Neue", "HelveticaNeue", -apple-system, BlinkMacSystemFont, Inter, "Segoe UI", "Helvetica", Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-family:  DM Sans, 'Outfit', "Helvetica Neue", "HelveticaNeue", -apple-system, BlinkMacSystemFont, Inter, "Segoe UI", "Helvetica", Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	font-size: 1.4rem;
 	/* letter-spacing: -1px; */
 	text-align: center;
@@ -69,6 +72,7 @@ body {
 	padding-left: 20%;
 	padding-right: 20%;
 	/* font-size: 1.4rem; */
+	padding-bottom: 20%;
 }
 
 .container {
@@ -329,3 +333,17 @@ a:focus {
 	color: inherit;
 	background: none;
 }
+
+.nounder a {
+	text-decoration: none;
+}
+
+.mono {
+	font-family: 'Fragment Mono', monospace;
+	background-color: rgba(237, 237, 211, 0.648);
+	border-radius: 5px;
+	padding: 2px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
