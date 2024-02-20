@@ -35,6 +35,7 @@
 /* @media (prefers-color-scheme: light) { */
 	:root {
 		--dark-color: #121212;
+		--text-color: #353333;
 		--light-color: #fff;
 		--highlight-color: rgba(207, 207, 207, 0.5);
 		--select-color: rgb(100, 100, 100);
@@ -55,17 +56,18 @@ h1 {
 	font-size: 5rem;
 	margin-bottom: 0px;
 	letter-spacing: -5px;
+	color: var(--dark-color);
 }
 .nav {
 	margin-top: 10px;
 }
 
 body {
-	color: var(--dark-color);
+	color: var(--text-color);
 	/* font-family: -apple-system,BlinkMacSystemFont,'Inter', sans-serif; */
 	font-weight: 400;
 	font-family:  DM Sans, 'Outfit', "Helvetica Neue", "HelveticaNeue", -apple-system, BlinkMacSystemFont, Inter, "Segoe UI", "Helvetica", Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-	font-size: 1.4rem;
+	font-size: 1.2rem;
 	/* letter-spacing: -1px; */
 	text-align: center;
 	padding-top: 10%;
@@ -76,7 +78,7 @@ body {
 }
 
 .container {
-	max-width: 800px;
+	max-width: 700px;
 	margin: auto;
 }
 
@@ -106,7 +108,7 @@ h3 a {
 }
 
 a {
-	color: var(--dark-color);
+	color: var(--text-color);
 	/* border-radius: 5px; */
 	padding-left: 3px;
 	padding-right: 3px;
@@ -114,7 +116,8 @@ a {
 	margin: -2px;
 	text-underline-offset: 2px;
 	text-decoration: underline;
-	text-decoration-color: var(--dark-color);
+	text-decoration-style: dotted;
+	text-decoration-color: var(--select-color);
 	/* transition-duration: 0.1s; */
 	z-index: -99;
 
@@ -129,31 +132,31 @@ a:hover {
 	text-decoration-color: transparent;
 	/* font-weight: 700; */
 	color: var(--light-color);
-	background-color: var(--dark-color); 
+	background-color: var(--text-color); 
 
 }
 
 a:focus {
 	animation: blinker 0.13s steps(2, end) 3;
 	color: var(--light-color);
-	background-color: var(--dark-color);
+	background-color: var(--text-color);
 }
 
 @keyframes blinker {
 	0% {
-		color: var(--dark-color);
+		color: var(--text-color);
 		background-color: var(--light-color);
 		animation-timing-function: steps(1, end);
 	}
 
 	50% {
 		color: var(--light-color);
-		background-color: var(--dark-color);
+		background-color: var(--text-color);
 		animation-timing-function: steps(1, end);
 	}
 
 	100% {
-		color: var(--dark-color);
+		color: var(--text-color);
 		background-color: var(--light-color);
 		animation-timing-function: steps(1, end);
 	}
@@ -168,7 +171,7 @@ a:focus {
 }
 .backmarker a:hover {
 
-	background-color: var(--dark-color);
+	background-color: var(--text-color);
 
 }
 
@@ -225,7 +228,7 @@ a:focus {
 }
 
 ::selection {
-	background: var(--dark-color);
+	background: rgb(10, 10, 255);
 	/* WebKit/Blink Browsers */
 	color: var(--light-color)
 }
@@ -279,7 +282,7 @@ a:focus {
 	position:absolute;
 	transform:translate(0%,-120%);
 
-	color: var(--dark-color);
+	color: var(--text-color);
 	font-weight: bold;
 	font-size: 1.2rem;
 	background-color: var(--light-color);
