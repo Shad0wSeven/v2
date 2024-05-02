@@ -375,7 +375,7 @@ a:focus {
 	color: var(--text-color);
 	font-weight: bold;
 	font-size: 1.2rem;
-	background-color: #00acdf;
+	/* background-color: #00acdf; */
 
 	padding: 40px;
 	border-radius: 50%;
