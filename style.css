@@ -34,7 +34,7 @@
 :root {
   --dark-color: #acacac;
   --text-color: #473f33;
-  --light-color: #fff;
+  --light-color: #fffbf7;
   --highlight-color: rgba(207, 207, 207, 0.5);
   --select-color: rgb(100, 100, 100);
   --footer-color: rgb(214, 214, 214);
@@ -62,6 +62,9 @@ h1 {
 
 body {
   color: var(--text-color);
+
+  background: rgb(2,0,36);
+  background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 47%, rgba(255,232,201,1) 100%);
   /* font-family: -apple-system,BlinkMacSystemFont,'Inter', sans-serif; */
   font-weight: 400;
   font-family: DM Sans, "Outfit", "Helvetica Neue", "HelveticaNeue",
