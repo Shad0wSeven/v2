@@ -55,8 +55,20 @@
 
             gtag("config", "G-P1DEMGGZMY");
         </script>
+        <style>
+            #inverter-box {
+                position: fixed;
+                width: 100px;
+                height: 100px;
+                background-color: white;
+                mix-blend-mode: difference;
+                pointer-events: none;
+                z-index: 1000;
+            }
+        </style>
     </head>
     <body>
+        <div id="inverter-box"></div>
         <div class="container">
             <div id="circle"></div>
             <div id="circle2">
@@ -259,14 +271,14 @@
                 >
                 <b>- Bill Watterson</b>
                 <!-- <br><br><br>
-	“The problem about the future is that it keeps turning into the present.”
-	“Every time I've built character, I've regretted it.”
-	“A day can really slip by when you're deliberately avoiding what you're supposed to do.”
-	“That's one of the remarkable things about life. It's never so bad that it can't get worse.”
-	“To invent your own life's meaning is not easy, but it's still allowed, and I think you'll be happier for the trouble.”
-	“There's never enough time to do all the nothing you want.”
-	“You know what's weird? Day by day, nothing seems to change, but pretty soon...everything's different.”
-	“We're so busy watching out for what's just ahead of us that we don't take time to enjoy where we are.”
+	"The problem about the future is that it keeps turning into the present."
+	"Every time I've built character, I've regretted it."
+	"A day can really slip by when you're deliberately avoiding what you're supposed to do."
+	"That's one of the remarkable things about life. It's never so bad that it can't get worse."
+	"To invent your own life's meaning is not easy, but it's still allowed, and I think you'll be happier for the trouble."
+	"There's never enough time to do all the nothing you want."
+	"You know what's weird? Day by day, nothing seems to change, but pretty soon...everything's different."
+	"We're so busy watching out for what's just ahead of us that we don't take time to enjoy where we are."
 
     Hi, I am Ayush Nayak, a High School student with too many ideas and too little time. Have fun checking out my socials and projects on this website! -->
             </div>
@@ -348,5 +360,52 @@
                 <i>hello from southern california</i>
             </footer>
         </div>
+
+        <script>
+            const inverterBox = document.getElementById("inverter-box");
+            let x = 0,
+                y = 0;
+            let dx = 2,
+                dy = 2;
+            let speed = 1;
+            let accelerated = false;
+
+            function moveBox() {
+                const maxX = window.innerWidth - inverterBox.offsetWidth;
+                const maxY = window.innerHeight - inverterBox.offsetHeight;
+
+                x += dx * speed;
+                y += dy * speed;
+
+                if (x <= 0 || x >= maxX) {
+                    dx = -dx;
+                    x = Math.max(0, Math.min(x, maxX));
+                }
+                if (y <= 0 || y >= maxY) {
+                    dy = -dy;
+                    y = Math.max(0, Math.min(y, maxY));
+                }
+
+                inverterBox.style.left = x + "px";
+                inverterBox.style.top = y + "px";
+
+                if (accelerated) {
+                    speed *= 0.99;
+                    if (speed <= 1) {
+                        speed = 1;
+                        accelerated = false;
+                    }
+                }
+
+                requestAnimationFrame(moveBox);
+            }
+
+            document.addEventListener("click", () => {
+                speed = 5;
+                accelerated = true;
+            });
+
+            moveBox();
+        </script>
     </body>
 </html>
