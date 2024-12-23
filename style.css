@@ -9,7 +9,23 @@
     src: url(/Monocraft.woff);
 } */
 
-@import url("https://fonts.cdnfonts.com/css/code-new-roman");
+
+@font-face {
+	font-family: 'Terminal Grotesque';
+	src: url('/terminal-grotesque-webfont.eot'); /* IE9 Compat Modes */
+	src: url('/terminal-grotesque-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('/terminal-grotesque-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+		 url('/terminal-grotesque-webfont.woff') format('woff'), /* Modern Browsers */
+		 url('/terminal-grotesque-webfont.svg#terminal_grotesque') format('svg'), /* Legacy iOS */
+		 url('/terminal-grotesque-webfont.ttf') format('truetype'); /* Safari, Android, iOS */
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap; /* Optimize font loading */
+  }
+
+/* @import url("https://fonts.cdnfonts.com/css/code-new-roman"); */
+
+
 
 @media (prefers-color-scheme: dark) {
     :root {
@@ -74,7 +90,7 @@ body {
     ); */
     /* font-family: -apple-system,BlinkMacSystemFont,'Inter', sans-serif; */
     font-weight: 400;
-    font-family: "Code New Roman", "Helvetica Neue", "HelveticaNeue",
+    font-family: "Terminal Grotesque", "Code New Roman", "Helvetica Neue", "HelveticaNeue",
         -apple-system, BlinkMacSystemFont, Inter, "Segoe UI", "Helvetica",
         Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
         "Segoe UI Symbol";
