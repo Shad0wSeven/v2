@@ -410,3 +410,65 @@ a:focus {
     /* font-size: 1rem; */
     z-index: 20;
 }
+
+
+
+.star-container {
+	position: absolute;
+	width: 8px;
+	height: 8px;
+  }
+
+  .star-pixel {
+	position: absolute;
+	width: 2px;
+	height: 2px;
+	background: white;
+	opacity: 0;
+  }
+
+  .star-pixel.center {
+	left: 3px;
+	top: 3px;
+	animation: centerPixel 10s infinite steps(1);
+  }
+
+  .star-pixel.north {
+	left: 3px;
+	top: 0;
+	animation: cardinalPixel 10s infinite steps(1);
+	animation-delay: 0.5s;
+  }
+
+  .star-pixel.south {
+	left: 3px;
+	bottom: 0;
+	animation: cardinalPixel 10s infinite steps(1);
+	animation-delay: 0.5s;
+  }
+
+  .star-pixel.east {
+	right: 0;
+	top: 3px;
+	animation: cardinalPixel 10s infinite steps(1);
+	animation-delay: 0.5s;
+  }
+
+  .star-pixel.west {
+	left: 0;
+	top: 3px;
+	animation: cardinalPixel 10s infinite steps(1);
+	animation-delay: 0.5s;
+  }
+
+  @keyframes centerPixel {
+	0%, 90% { opacity: 0; }
+	92% { opacity: 1; }
+	94%, 100% { opacity: 0; }
+  }
+
+  @keyframes cardinalPixel {
+	0%, 92% { opacity: 0; }
+	94% { opacity: 1; }
+	96%, 100% { opacity: 0; }
+  }

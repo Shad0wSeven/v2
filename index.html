@@ -69,24 +69,56 @@
     </head>
     <body>
         <div id="inverter-box"></div>
+		
         <div class="container">
+			<div id="stars-wrapper">
+				<script>
+				  const wrapper = document.getElementById('stars-wrapper');
+				  
+				  // Create 40 star groups
+				  for (let i = 0; i < 40; i++) {
+					const container = document.createElement('div');
+					container.className = 'star-container';
+					
+					// Random position
+					container.style.left = `${Math.random() * 100}%`;
+					container.style.top = `${Math.random() * 100}%`;
+					
+					// Much longer random delay (0-8 seconds)
+					const delay = Math.random() * 8;
+					
+					// Create the star pixels
+					const positions = ['center', 'north', 'south', 'east', 'west'];
+					positions.forEach(position => {
+					  const pixel = document.createElement('div');
+					  pixel.className = `star-pixel ${position}`;
+					  pixel.style.animationDelay = `${delay}s`;
+					  container.appendChild(pixel);
+					});
+					
+					wrapper.appendChild(container);
+				  }
+				</script>
+			  </div>
             <div id="circle"></div>
             <div id="circle2">
                 <div id="bgcircle"></div>
             </div>
 
             <h1 contenteditable="true" style="outline: none">ayuuuush</h1>
+
+			
             <p class="nav">
                 <a
                     href="https://unintelligible.xyz"
-                    onmouseover="circle.innerHTML='↗ unintelligible.xyz';"
+                    onmouseover="circle.innerHTML='> unintelligible.xyz';"
                     onmouseout="circle.innerHTML='';"
                     >blog</a
                 >
                 <!-- <a href="projects.html">projects</a> -->
                 <a
                     href="https://github.com/Shad0wSeven"
-                    onmouseover="circle.innerHTML='↗ github.com';"
+                    onmouseover="circle.innerHTML='> github.com';"
                     onmouseout="circle.innerHTML='';"
                     >github</a
                 >
@@ -102,7 +134,7 @@
         > -->
                 <a
                     href="https://photos-ayushnayak.vercel.app"
-                    onmouseover="circle.innerHTML='↗ photos.ayushnayak.com';"
+                    onmouseover="circle.innerHTML='> photos.ayushnayak.com';"
                     onmouseout="circle.innerHTML='';"
                     >photos</a
                 >
@@ -114,7 +146,7 @@
 
                 <a
                     href="https://www.mit.edu/"
-                    onmouseover="circle.innerHTML='↗ mit.edu';"
+                    onmouseover="circle.innerHTML='> mit.edu';"
                     onmouseout="circle.innerHTML='';"
                     >mit</a
                 >, working on a few different things, and going on way too many
@@ -134,7 +166,7 @@
 
                 <a
                     href="https://photos-ayushnayak.vercel.app/"
-                    onmouseover="circle.innerHTML='↗ photos.ayushnayak.com';"
+                    onmouseover="circle.innerHTML='> photos.ayushnayak.com';"
                     onmouseout="circle.innerHTML='';"
                     >film photography</a
                 >, drones, cinematography, astronomy, skateboarding, design,
@@ -142,7 +174,7 @@
 
                 <a
                     href="https://www.deviantart.com/shad0wseven"
-                    onmouseover="circle.innerHTML='↗ deviantart.com';"
+                    onmouseover="circle.innerHTML='> deviantart.com';"
                     onmouseout="circle.innerHTML='';"
                     >3d art</a
                 >, and stealing signs. <br /><br />
@@ -152,21 +184,21 @@
                 in the past i
                 <a
                     href="https://unintelligible.xyz"
-                    onmouseover="circle.innerHTML='↗ unintelligible.xyz';"
+                    onmouseover="circle.innerHTML='> unintelligible.xyz';"
                     onmouseout="circle.innerHTML='';"
                     >designed and built</a
                 >
 
                 <a
                     href="https://x-sqrd.github.io/"
-                    onmouseover="circle.innerHTML='↗ x-sqrd.github.io';"
+                    onmouseover="circle.innerHTML='> x-sqrd.github.io';"
                     onmouseout="circle.innerHTML='';"
                     >bleeding-edge 3-valued transistors</a
                 >
 
                 <a
                     href="https://abstracts.societyforscience.org/Home/FullAbstract?Category=Any%20Category&Finalist=nayak&AllAbstracts=False&FairCountry=Any%20Country&FairState=Any%20State&ProjectId=22625"
-                    onmouseover="circle.innerHTML='↗ societyforscience.org';"
+                    onmouseover="circle.innerHTML='> societyforscience.org';"
                     onmouseout="circle.innerHTML='';"
                     >independently</a
                 >
@@ -174,21 +206,21 @@
                 a chip-sat to the moon. I've worked for
                 <a
                     href="https://www.nasa.gov/"
-                    onmouseover="circle.innerHTML='↗ nasa.gov';"
+                    onmouseover="circle.innerHTML='> nasa.gov';"
                     onmouseout="circle.innerHTML='';"
                     >nasa</a
                 >,
 
                 <a
                     href="https://www.sdsc.edu/"
-                    onmouseover="circle.innerHTML='↗ sdsc.edu';"
+                    onmouseover="circle.innerHTML='> sdsc.edu';"
                     onmouseout="circle.innerHTML='';"
                     >ucsd</a
                 >,
 
                 <a
                     href="https://www.northropgrumman.com/"
-                    onmouseover="circle.innerHTML='↗ northropgrumman.com';"
+                    onmouseover="circle.innerHTML='> northropgrumman.com';"
                     onmouseout="circle.innerHTML='';"
                     >northrop</a
                 >, and many others, dabbling in incredibly robust system design,
@@ -203,7 +235,7 @@
 			<i class="fa fa-calendar"></i>
 			<a
 			  href="https://cal.com/ayushnayak"
-			  onmouseover="circle.innerHTML='↗ cal.com';"
+			  onmouseover="circle.innerHTML='> cal.com';"
 			  onmouseout="circle.innerHTML='';"
 			  >schedule a meeting</a
 			>
@@ -211,34 +243,38 @@
         <br /> -->
 
                 <span class="nounder">
-                    <i class="fab fa-twitter"></i>
+                    <!-- <i class="fab fa-twitter"></i> -->
+					 twt:
                     <a
                         href="https://twitter.com/_ayushnayak"
-                        onmouseover="circle.innerHTML='↗ x.com';"
+                        onmouseover="circle.innerHTML='> x.com';"
                         onmouseout="circle.innerHTML='';"
                         >@_ayushnayak</a
                     >
                     <br />
-                    <i class="fa fa-instagram"></i>
+                    <!-- <i class="fa fa-instagram"></i> -->
+					 insta:
                     <a
                         href="https://www.instagram.com/ayuuuussshh/"
-                        onmouseover="circle.innerHTML='↗ instagram.com';"
+                        onmouseover="circle.innerHTML='> instagram.com';"
                         onmouseout="circle.innerHTML='';"
                         >@ayuuuussshh</a
                     >
                     <br />
-                    <i class="fab fa-discord"></i>
+                    <!-- <i class="fab fa-discord"></i> -->
+					 disc:
                     <a
                         href="https://discord.com/users/291372693670854656"
-                        onmouseover="circle.innerHTML='↗ discord.com';"
+                        onmouseover="circle.innerHTML='> discord.com';"
                         onmouseout="circle.innerHTML='';"
                         >@ayushnayak</a
                     >
                     <br />
-                    <i class="fa fa-envelope"></i>
+                    <!-- <i class="fa fa-envelope"></i> -->
+					e-mail:
                     <a
                         href="mailto:ayushn@mit.edu"
-                        onmouseover="circle.innerHTML='↗ your email client';"
+                        onmouseover="circle.innerHTML='> your email client';"
                         onmouseout="circle.innerHTML='';"
                         >ayushn@mit.edu</a
                     ><br /><br />
@@ -246,7 +282,7 @@
 
                 <!-- <a
 		href="https://www.northropgrumman.com/"
-		onmouseover="circle.innerHTML='↗ githu';"
+		onmouseover="circle.innerHTML='> githu';"
 		onmouseout="circle.innerHTML='';"
 		>and other ideas</a>. -->
 
@@ -287,32 +323,32 @@
       <h3 style="padding-top: 2rem" class="icons">
         <a
           href="https://github.com/Shad0wSeven"
-          onmouseover="circle.innerHTML='↗ github.com';"
+          onmouseover="circle.innerHTML='> github.com';"
           onmouseout="circle.innerHTML='';"
           ><i class="fab fa-github"></i
         ></a>
         <a
           href="https://discord.com/users/291372693670854656"
-          onmouseover="circle.innerHTML='↗ discord.com';"
+          onmouseover="circle.innerHTML='> discord.com';"
           onmouseout="circle.innerHTML='';"
           ><i class="fab fa-discord"></i
         ></a>
         <a
           href="https://www.deviantart.com/shad0wseven"
-          onmouseover="circle.innerHTML='↗ deviantart.com';"
+          onmouseover="circle.innerHTML='> deviantart.com';"
           onmouseout="circle.innerHTML='';"
           ><i class="fab fa-deviantart"></i
         ></a>
 
         <a
           href="https://www.youtube.com/channel/UCpqFLaaH2R1aSmpQzE2Kk4A"
-          onmouseover="circle.innerHTML='↗ youtube.com';"
+          onmouseover="circle.innerHTML='> youtube.com';"
           onmouseout="circle.innerHTML='';"
           ><i class="fab fa-youtube"></i
         ></a>
         <a
           href="https://www.instagram.com/ayuuuussshh/"
-          onmouseover="circle.innerHTML='↗ instagram.com';"
+          onmouseover="circle.innerHTML='> instagram.com';"
           onmouseout="circle.innerHTML='';"
           ><i class="fab fa-instagram"></i
         ></a>
