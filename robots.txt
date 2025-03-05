@@ -1,4 +1,4 @@
-Sitemap: https://www.ayushnayak.me/sitemap.xml
+Sitemap: https://www.ayushnayak.com/sitemap.xml
 
 User-agent: Googlebot
 Allow: /
