@@ -9,23 +9,25 @@
     src: url(/Monocraft.woff);
 } */
 
-
 @font-face {
-	font-family: 'Terminal Grotesque';
-	src: url('/terminal-grotesque-webfont.eot'); /* IE9 Compat Modes */
-	src: url('/terminal-grotesque-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-		 url('/terminal-grotesque-webfont.woff2') format('woff2'), /* Super Modern Browsers */
-		 url('/terminal-grotesque-webfont.woff') format('woff'), /* Modern Browsers */
-		 url('/terminal-grotesque-webfont.svg#terminal_grotesque') format('svg'), /* Legacy iOS */
-		 url('/terminal-grotesque-webfont.ttf') format('truetype'); /* Safari, Android, iOS */
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap; /* Optimize font loading */
-  }
+    font-family: "Terminal Grotesque";
+    src: url("/terminal-grotesque-webfont.eot"); /* IE9 Compat Modes */
+    src: url("/terminal-grotesque-webfont.eot?#iefix")
+            format("embedded-opentype"),
+        /* IE6-IE8 */ url("/terminal-grotesque-webfont.woff2") format("woff2"),
+        /* Super Modern Browsers */ url("/terminal-grotesque-webfont.woff")
+            format("woff"),
+        /* Modern Browsers */
+            url("/terminal-grotesque-webfont.svg#terminal_grotesque")
+            format("svg"),
+        /* Legacy iOS */ url("/terminal-grotesque-webfont.ttf")
+            format("truetype"); /* Safari, Android, iOS */
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /* Optimize font loading */
+}
 
 /* @import url("https://fonts.cdnfonts.com/css/code-new-roman"); */
-
-
 
 @media (prefers-color-scheme: dark) {
     :root {
@@ -46,6 +48,9 @@
         --highlight-color: rgba(200, 200, 200, 0.5);
         --select-color: #000000;
         --footer-color: #888888;
+    }
+    .star-container {
+        display: none;
     }
 }
 
@@ -90,10 +95,10 @@ body {
     ); */
     /* font-family: -apple-system,BlinkMacSystemFont,'Inter', sans-serif; */
     font-weight: 400;
-    font-family: "Terminal Grotesque", "Code New Roman", "Helvetica Neue", "HelveticaNeue",
-        -apple-system, BlinkMacSystemFont, Inter, "Segoe UI", "Helvetica",
-        Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-        "Segoe UI Symbol";
+    font-family: "Terminal Grotesque", "Code New Roman", "Helvetica Neue",
+        "HelveticaNeue", -apple-system, BlinkMacSystemFont, Inter, "Segoe UI",
+        "Helvetica", Roboto, Arial, sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 1.2rem;
     letter-spacing: -1px;
     text-align: center;
@@ -411,64 +416,78 @@ a:focus {
     z-index: 20;
 }
 
-
-
 .star-container {
-	position: absolute;
-	width: 8px;
-	height: 8px;
-  }
+    position: absolute;
+    width: 8px;
+    height: 8px;
+}
 
-  .star-pixel {
-	position: absolute;
-	width: 2px;
-	height: 2px;
-	background: white;
-	opacity: 0;
-  }
+.star-pixel {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    opacity: 0;
+}
 
-  .star-pixel.center {
-	left: 3px;
-	top: 3px;
-	animation: centerPixel 10s infinite steps(1);
-  }
+.star-pixel.center {
+    left: 3px;
+    top: 3px;
+    animation: centerPixel 10s infinite steps(1);
+}
 
-  .star-pixel.north {
-	left: 3px;
-	top: 0;
-	animation: cardinalPixel 10s infinite steps(1);
-	animation-delay: 0.5s;
-  }
+.star-pixel.north {
+    left: 3px;
+    top: 0;
+    animation: cardinalPixel 10s infinite steps(1);
+    animation-delay: 0.5s;
+}
 
-  .star-pixel.south {
-	left: 3px;
-	bottom: 0;
-	animation: cardinalPixel 10s infinite steps(1);
-	animation-delay: 0.5s;
-  }
+.star-pixel.south {
+    left: 3px;
+    bottom: 0;
+    animation: cardinalPixel 10s infinite steps(1);
+    animation-delay: 0.5s;
+}
 
-  .star-pixel.east {
-	right: 0;
-	top: 3px;
-	animation: cardinalPixel 10s infinite steps(1);
-	animation-delay: 0.5s;
-  }
+.star-pixel.east {
+    right: 0;
+    top: 3px;
+    animation: cardinalPixel 10s infinite steps(1);
+    animation-delay: 0.5s;
+}
 
-  .star-pixel.west {
-	left: 0;
-	top: 3px;
-	animation: cardinalPixel 10s infinite steps(1);
-	animation-delay: 0.5s;
-  }
+.star-pixel.west {
+    left: 0;
+    top: 3px;
+    animation: cardinalPixel 10s infinite steps(1);
+    animation-delay: 0.5s;
+}
 
-  @keyframes centerPixel {
-	0%, 90% { opacity: 0; }
-	92% { opacity: 1; }
-	94%, 100% { opacity: 0; }
-  }
+@keyframes centerPixel {
+    0%,
+    90% {
+        opacity: 0;
+    }
+    92% {
+        opacity: 1;
+    }
+    94%,
+    100% {
+        opacity: 0;
+    }
+}
 
-  @keyframes cardinalPixel {
-	0%, 92% { opacity: 0; }
-	94% { opacity: 1; }
-	96%, 100% { opacity: 0; }
-  }
+@keyframes cardinalPixel {
+    0%,
+    92% {
+        opacity: 0;
+    }
+    94% {
+        opacity: 1;
+    }
+    96%,
+    100% {
+        opacity: 0;
+    }
+}
