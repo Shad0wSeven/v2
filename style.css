@@ -47,6 +47,7 @@
 	--highlight-color: rgba(200, 200, 200, 0.5);
 	--select-color: #000000;
 	--footer-color: #888888;
+	
 }
 .star-container {
 	display: none;
@@ -169,8 +170,8 @@ h3 a {
     position: relative;
     width: 100%;
     color: rgb(0, 0, 108);
-    font-size: clamp(0.7rem, 1.4vw, 1.1rem);
-    padding: 20px;
+    /* font-size: clamp(0.7rem, 1.4vw, 1.1rem); */
+    /* padding: 20px; */
     text-align: center;
     z-index: 10;
     margin-top: 20px;
@@ -244,7 +245,7 @@ a {
 
     text-underline-offset: 2px;
     text-decoration: underline;
-    text-decoration-style: dotted;
+    text-decoration-style: solid;
     text-decoration-color: white;
     /* transition-duration: 0.1s; */
     z-index: -99;
