@@ -1,446 +1,138 @@
-<!DOCTYPE html>
 <html lang="en">
     <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Ayush Nayak</title>
-        <meta chaarset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="author" content="Ayush Nayak" />
-        <meta name="description" content="welcome to my website!!11one" />
-        <meta property="og:title" content="Ayush Nayak" />
-        <meta
-            property="og:description"
-            content="welcome to my website!!11one"
-        />
-        <script
-            src="https://kit.fontawesome.com/9f219c9d78.js"
-            crossorigin="anonymous"
-        ></script>
-        <meta property="og:image" content="/calvin.jpg" />
-        <meta property="og:url" content="/index.html" />
-        <meta property="og:site_name" content="ayushnayak.com" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <!-- required -->
-        <meta name="twitter:site" content="@_ayushnayak" />
-        <!-- required -->
-        <meta name="twitter:title" content="Ayush Nayak" />
-        <!-- required -->
-        <meta name="twitter:image" content="/calvin.jpg" />
-        <!-- optional -->
-        <meta name="twitter:image:alt" content="Background for Website Image" />
-        <!-- optional -->
-        <link href="style.css" rel="stylesheet" />
-        <link href="bgstyle.css" rel="stylesheet" />
-        <link rel="icon" href="/favicon.ico" />
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=G-P1DEMGGZMY"
-        ></script>
-        <!-- Cloudflare Web Analytics -->
-        <script
-            defer
-            src="https://static.cloudflareinsights.com/beacon.min.js"
-            data-cf-beacon='{"token": "204602dfa4dd41ad9d8d246ddd6dfe3e"}'
-        ></script>
-        <!-- End Cloudflare Web Analytics -->
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag("js", new Date());
+    <meta name="author" content="Ayush Nayak">
+    <meta name="description" content="welcome to my website!!11one">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-            gtag("config", "G-P1DEMGGZMY");
-        </script>
-        <style>
-            #inverter-box {
-                position: fixed;
-                width: 100px;
-                height: 100px;
-                background-color: white;
-                mix-blend-mode: difference;
-                pointer-events: none;
-                z-index: 1000;
-            }
+        html, body {
+            height: 100%;
+            background: #000;
+            overflow-x: hidden;
+        }
+
+        /* Create scrollable content */
+        .content {
+            height: 150vh; /* This creates the scrollable area */
+            position: relative;
+            z-index: 0;
+        }
+
+        /* Fixed parallax layers */
+        .image-layer {
+            position: fixed;
+            top: -5px;
+            left: -5px;
+            width: calc(100vw + 10px);
+            height: calc(100vh + 10px);
+            image-rendering: pixelated;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: crisp-edges;
+        }
+
+        .bg-layer {
+            z-index: 1;
+        }
+
+        .stars-layer {
+            z-index: 2;
+        }
+
+        .text-layer {
+            z-index: 3;
+        }
+
+        .image-layer img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            image-rendering: pixelated;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: crisp-edges;
+        }
+
+        /* Ensure pixel-perfect rendering */
+        img {
+            image-rendering: pixelated;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: crisp-edges;
+            image-rendering: optimize-contrast;
+        }
         </style>
     </head>
     <body>
-        <div id="inverter-box"></div>
-
-        <div class="container">
-            <div id="stars-wrapper">
-                <script>
-                    const wrapper = document.getElementById("stars-wrapper");
-
-                    // Create 40 star groups
-                    for (let i = 0; i < 40; i++) {
-                        const container = document.createElement("div");
-                        container.className = "star-container";
-
-                        // Random position
-                        container.style.left = `${Math.random() * 100}%`;
-                        container.style.top = `${Math.random() * 100}%`;
-
-                        // Much longer random delay (0-8 seconds)
-                        const delay = Math.random() * 8;
-
-                        // Create the star pixels
-                        const positions = [
-                            "center",
-                            "north",
-                            "south",
-                            "east",
-                            "west",
-                        ];
-                        positions.forEach((position) => {
-                            const pixel = document.createElement("div");
-                            pixel.className = `star-pixel ${position}`;
-                            pixel.style.animationDelay = `${delay}s`;
-                            container.appendChild(pixel);
-                        });
-
-                        wrapper.appendChild(container);
-                    }
-                </script>
+    
+        <div class="image-layer bg-layer">
+            <img src="bgwebsite.png" alt="Background">
             </div>
-            <div id="circle"></div>
-            <div id="circle2">
-                <div id="bgcircle"></div>
+        <div class="image-layer stars-layer">
+            <img src="stars.png" alt="Stars">
             </div>
-
-            <h1 contenteditable="true" style="outline: none">ayuuuush</h1>
-
-            <p class="nav">
-                <a
-                    href="https://unintelligible.xyz"
-                    onmouseover="circle.innerHTML='> unintelligible.xyz';"
-                    onmouseout="circle.innerHTML='';"
-                    >blog</a
-                >
-                <!-- <a href="projects.html">projects</a> -->
-                <a
-                    href="https://github.com/Shad0wSeven"
-                    onmouseover="circle.innerHTML='> github.com';"
-                    onmouseout="circle.innerHTML='';"
-                    >github</a
-                >
-                <!-- <a href="https://storage-pearl.vercel.app/resumev3.pdf">
-
-                    resume</a
-                > -->
-                <!-- <a
-          href="https://x-sqrd.github.io"
-          onmouseover="circle.innerHTML='x-sqrd.github.io';"
-          onmouseout="circle.innerHTML='';"
-          >unikorn</a
-        > -->
-                <a
-                    href="https://www.flickr.com/photos/ayushnayak/"
-                    onmouseover="circle.innerHTML='> flickr.com';"
-                    onmouseout="circle.innerHTML='';"
-                    >photos</a
-                >
-            </p>
-            <!--https://abstracts.societyforscience.org/Home/FullAbstract?Category=Any%20Category&Finalist=nayak&AllAbstracts=False&FairCountry=Any%20Country&FairState=Any%20State&ProjectId=22625  -->
-            <p style="text-align: left">
-                hi! i'm ayush nayak, and since 2004 i've been finding
-                fascinating problems. currently I'm doing math and astrophys at
-
-                <a
-                    href="https://www.mit.edu/"
-                    onmouseover="circle.innerHTML='> mit.edu';"
-                    onmouseout="circle.innerHTML='';"
-                    >mit</a
-                >, working at
-                <a
-                    href="https://x.com/"
-                    onmouseover="circle.innerHTML='> x.com';"
-                    onmouseout="circle.innerHTML='';"
-                    >x/xai</a
-                >, and going on way too many trips.
-
-                <br /><br />
-
-                i live life to collect stories: turning a hackathon into a rave,
-                dumpster diving 50k, living out of a lifeguard tower for two
-                nights, and (allegedly) stealing over 20 signs. in my past life,
-                i was a
-
-                <a
-                    href="https://www.ycombinator.com/"
-                    onmouseover="circle.innerHTML='> ycombinator.com';"
-                    onmouseout="circle.innerHTML='';"
-                    >yc s24</a
-                >
-
-                founder, working on observability, model behavior and data work.
-                <br /><br />
-
-                things i'm interested in:<br />
-                everything about llm's, especially sft data, multi-llm networks,
-                surfing,
-
-                <a
-                    href="https://www.notion.so/melodic-airedale/gear-acquisition-syndrome-photography-17298a756e728024b42df64ae0e40668?source=copy_link"
-                    onmouseover="circle.innerHTML='> flickr.com';"
-                    onmouseout="circle.innerHTML='';"
-                    >film photography</a
-                >, drones, cinematography, astronomy, skateboarding, design,
-                crypto, silicon, e-guitar, hardware,
-
-                <a
-                    href="https://www.deviantart.com/shad0wseven"
-                    onmouseover="circle.innerHTML='> deviantart.com';"
-                    onmouseout="circle.innerHTML='';"
-                    >3d art</a
-                >, and prediction markets. <br /><br />
-
-                <!-- https://www.deviantart.com/shad0wseven -->
-
-                in the past i
-                <a
-                    href="https://unintelligible.xyz"
-                    onmouseover="circle.innerHTML='> unintelligible.xyz';"
-                    onmouseout="circle.innerHTML='';"
-                    >designed and built</a
-                >
-
-                <a
-                    href="https://x-sqrd.github.io/"
-                    onmouseover="circle.innerHTML='> x-sqrd.github.io';"
-                    onmouseout="circle.innerHTML='';"
-                    >bleeding-edge 3-valued transistors</a
-                >
-
-                <a
-                    href="https://abstracts.societyforscience.org/Home/FullAbstract?Category=Any%20Category&Finalist=nayak&AllAbstracts=False&FairCountry=Any%20Country&FairState=Any%20State&ProjectId=22625"
-                    onmouseover="circle.innerHTML='> societyforscience.org';"
-                    onmouseout="circle.innerHTML='';"
-                    >independently</a
-                >
-                to discovering transit-timing-variable exoplanets, and launching
-                a chip-sat to the moon. <br /><br />
-
-                i'd love to talk about anything interesting, so feel free to
-                reach out to me!
-
-                <br /><br />
-
-                <!-- 		<span class="nounder">
-			<i class="fa fa-calendar"></i>
-			<a
-			  href="https://cal.com/ayushnayak"
-			  onmouseover="circle.innerHTML='> cal.com';"
-			  onmouseout="circle.innerHTML='';"
-			  >schedule a meeting</a
-			>
-
-        <br /> -->
-
-                <span class="nounder">
-                    <!-- <i class="fab fa-twitter"></i> -->
-                    twt:
-                    <a
-                        href="https://twitter.com/_ayushnayak"
-                        onmouseover="circle.innerHTML='> x.com';"
-                        onmouseout="circle.innerHTML='';"
-                        >@_ayushnayak</a
-                    >
-                    <br />
-                    <!-- <i class="fa fa-instagram"></i> -->
-                    insta:
-                    <a
-                        href="https://www.instagram.com/ayuuuussshh/"
-                        onmouseover="circle.innerHTML='> instagram.com';"
-                        onmouseout="circle.innerHTML='';"
-                        >@ayuuuussshh</a
-                    >
-                    <br />
-                    <!-- <i class="fab fa-discord"></i> -->
-                    disc:
-                    <a
-                        href="https://discord.com/users/291372693670854656"
-                        onmouseover="circle.innerHTML='> discord.com';"
-                        onmouseout="circle.innerHTML='';"
-                        >@shad0wseven</a
-                    >
-                    <br />
-                    <!-- <i class="fa fa-envelope"></i> -->
-                    e-mail:
-                    <a
-                        href="mailto:ayushn@mit.edu"
-                        onmouseover="circle.innerHTML='> your email client';"
-                        onmouseout="circle.innerHTML='';"
-                        >ayushn@mit.edu</a
-                    ><br /><br />
-                </span>
-
-                <!-- <a
-		href="https://www.northropgrumman.com/"
-		onmouseover="circle.innerHTML='> githu';"
-		onmouseout="circle.innerHTML='';"
-		>and other ideas</a>. -->
-
-                <!-- <br><br> I live to explore, and have built an <a href="https://github.com/Shad0wSeven/Congressional-App-Winner" onmouseover="circle.innerHTML='github.com';"
-      onmouseout="circle.innerHTML='';">ML app for the blind</a>, designed a <a href="https://github.com/x-sqrd/Optis/blob/main/Optis-2020-1.pdf" onmouseover="circle.innerHTML='github.com';"
-      onmouseout="circle.innerHTML='';">space settlement</a>, created a prototype <a href="https://github.com/Shad0wSeven/Luna" onmouseover="circle.innerHTML='github.com';"
-      onmouseout="circle.innerHTML='';">laser internet system</a>, and designed and patenting a <a href="https://x-sqrd.github.io" onmouseover="circle.innerHTML='x-sqrd.github.io';"
-      onmouseout="circle.innerHTML='';">mindbendingly fast new type of CPU</a>, among many other things!  -->
-            </p>
-
-            <img
-                src="/calvin.png"
-                alt="Ayush Nayak's favorite comic, Calvin and Hobbes"
-            />
-            <div style="margin-top: -30px">
-                <br />
-                <i
-                    ><p id="text">
-                        "For no reason I can think of, I've wandered far astray.
-                        And that is how I got to where I find myself today."
-                    </p></i
-                >
-                <b>- Bill Watterson</b>
-                <!-- <br><br><br>
-	"The problem about the future is that it keeps turning into the present."
-	"Every time I've built character, I've regretted it."
-	"A day can really slip by when you're deliberately avoiding what you're supposed to do."
-	"That's one of the remarkable things about life. It's never so bad that it can't get worse."
-	"To invent your own life's meaning is not easy, but it's still allowed, and I think you'll be happier for the trouble."
-	"There's never enough time to do all the nothing you want."
-	"You know what's weird? Day by day, nothing seems to change, but pretty soon...everything's different."
-	"We're so busy watching out for what's just ahead of us that we don't take time to enjoy where we are."
-
-    Hi, I am Ayush Nayak, a High School student with too many ideas and too little time. Have fun checking out my socials and projects on this website! -->
-            </div>
-
-            <!-- Icons
-      <h3 style="padding-top: 2rem" class="icons">
-        <a
-          href="https://github.com/Shad0wSeven"
-          onmouseover="circle.innerHTML='> github.com';"
-          onmouseout="circle.innerHTML='';"
-          ><i class="fab fa-github"></i
-        ></a>
-        <a
-          href="https://discord.com/users/291372693670854656"
-          onmouseover="circle.innerHTML='> discord.com';"
-          onmouseout="circle.innerHTML='';"
-          ><i class="fab fa-discord"></i
-        ></a>
-        <a
-          href="https://www.deviantart.com/shad0wseven"
-          onmouseover="circle.innerHTML='> deviantart.com';"
-          onmouseout="circle.innerHTML='';"
-          ><i class="fab fa-deviantart"></i
-        ></a>
-
-        <a
-          href="https://www.youtube.com/channel/UCpqFLaaH2R1aSmpQzE2Kk4A"
-          onmouseover="circle.innerHTML='> youtube.com';"
-          onmouseout="circle.innerHTML='';"
-          ><i class="fab fa-youtube"></i
-        ></a>
-        <a
-          href="https://www.instagram.com/ayuuuussshh/"
-          onmouseover="circle.innerHTML='> instagram.com';"
-          onmouseout="circle.innerHTML='';"
-          ><i class="fab fa-instagram"></i
-        ></a>
- 
-
-      </h3> -->
-
-            <script>
-                // the multiple is an easy way to weight the probabilities
-                var texts = [
-                    "The problem about the future is that it keeps turning into the present.",
-
-                    "Every time I've built character, I've regretted it.",
-                    "Every time I've built character, I've regretted it.",
-
-                    "A day can really slip by when you're deliberately avoiding what you're supposed to do.",
-                    "A day can really slip by when you're deliberately avoiding what you're supposed to do.",
-                    "A day can really slip by when you're deliberately avoiding what you're supposed to do.",
-
-                    "There's never enough time to do all the nothing you want.",
-                    "There's never enough time to do all the nothing you want.",
-                    "There's never enough time to do all the nothing you want.",
-
-                    "For no reason I can think of, I've wandered far astray. And that is how I got to where I find myself today.",
-                    "For no reason I can think of, I've wandered far astray. And that is how I got to where I find myself today.",
-
-                    "You know what's weird? Day by day, nothing seems to change, but pretty soon...everything's different.",
-                ];
-                document.getElementById("text").innerHTML =
-                    texts[Math.floor(Math.random() * texts.length)];
-            </script>
-            <script>
-                let circle = document.getElementById("circle");
-                let circle2 = document.getElementById("circle2");
-                const onMouseMove = (e) => {
-                    circle.style.left = e.pageX + "px";
-                    circle.style.top = e.pageY + "px";
-                    circle2.style.left = e.pageX + "px";
-                    circle2.style.top = e.pageY + "px";
-                };
-                document.addEventListener("mousemove", onMouseMove);
-            </script>
-
-            <footer class="footer">
-                <i>hello from southern california</i>
-                <p>
-                    Font: Terminal Grotesque by Raphaël Bastide, with the
-                    contribution of Jérémy Landes. Distributed by velvetyne.fr.
-                </p>
-            </footer>
+        <div class="image-layer text-layer">
+            <img src="textwebsite.png" alt="Text">
         </div>
+    
+    
+    <div class="content"></div>
 
-        <script>
-            const inverterBox = document.getElementById("inverter-box");
-            let x = 0,
-                y = 0;
-            let dx = 2,
-                dy = 2;
-            let speed = 1;
-            let accelerated = false;
-
-            function moveBox() {
-                const maxX = window.innerWidth - inverterBox.offsetWidth;
-                const maxY = window.innerHeight - inverterBox.offsetHeight;
-
-                x += dx * speed;
-                y += dy * speed;
-
-                if (x <= 0 || x >= maxX) {
-                    dx = -dx;
-                    x = Math.max(0, Math.min(x, maxX));
-                }
-                if (y <= 0 || y >= maxY) {
-                    dy = -dy;
-                    y = Math.max(0, Math.min(y, maxY));
-                }
-
-                inverterBox.style.left = x + "px";
-                inverterBox.style.top = y + "px";
-
-                if (accelerated) {
-                    speed *= 0.99;
-                    if (speed <= 1) {
-                        speed = 1;
-                        accelerated = false;
-                    }
-                }
-
-                requestAnimationFrame(moveBox);
-            }
-
-            document.addEventListener("click", () => {
-                speed = 5;
-                accelerated = true;
-            });
-
-            moveBox();
-        </script>
+    <script>
+        const starsLayer = document.querySelector('.stars-layer');
+        const textLayer = document.querySelector('.text-layer');
+        
+        let mouseX = 0.5;
+        let mouseY = 0.5;
+        
+        const maxOffset = 3; // Reduced to prevent art from going beyond boundaries
+        const pixelStep = 2; // Force movement to 2-pixel steps (larger jumps)
+        
+        function updateParallax() {
+            // Calculate raw positions
+            const rawStarsX = (mouseX - 0.5) * maxOffset * 4;
+            const rawStarsY = (mouseY - 0.5) * maxOffset * 4;
+            
+            const rawTextX = (mouseX - 0.5) * maxOffset * 2;
+            const rawTextY = (mouseY - 0.5) * maxOffset * 2;
+            
+            // Snap to larger pixel grid to prevent subpixel positioning
+            const pixelStarsX = Math.round(rawStarsX / pixelStep) * pixelStep;
+            const pixelStarsY = Math.round(rawStarsY / pixelStep) * pixelStep;
+            const pixelTextX = Math.round(rawTextX / pixelStep) * pixelStep;
+            const pixelTextY = Math.round(rawTextY / pixelStep) * pixelStep;
+            
+            // Apply transforms with guaranteed pixel-perfect positioning
+            // Remove offset to align properly with background
+            starsLayer.style.transform = `translate(${pixelStarsX}px, ${pixelStarsY}px)`;
+            textLayer.style.transform = `translate(${pixelTextX}px, ${pixelTextY}px)`;
+        }
+        
+        // More aggressive quantization for larger steps
+        document.addEventListener('mousemove', (e) => {
+            const rawMouseX = e.clientX / window.innerWidth;
+            const rawMouseY = e.clientY / window.innerHeight;
+            
+            // Fewer steps for more dramatic jumps
+            const mouseSteps = 10; // Reduced from 20 for larger jumps
+            mouseX = Math.round(rawMouseX * mouseSteps) / mouseSteps;
+            mouseY = Math.round(rawMouseY * mouseSteps) / mouseSteps;
+            
+            updateParallax();
+        });
+        
+        document.addEventListener('mouseleave', () => {
+            mouseX = 0.5;
+            mouseY = 0.5;
+            updateParallax();
+        });
+        
+        updateParallax();
+    </script>
     </body>
 </html>
