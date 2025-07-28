@@ -47,6 +47,7 @@
 	--highlight-color: rgba(200, 200, 200, 0.5);
 	--select-color: #000000;
 	--footer-color: #888888;
+	--background-blue: rgb(0, 0, 113);
 	
 }
 .star-container {
@@ -99,7 +100,7 @@ html, body {
 
 body {
     color: white;
-    background-color: rgb(0, 0, 108);
+    background-color: var(--background-blue);
     -webkit-font-smoothing: none;
     -moz-osx-font-smoothing: unset;
     font-smooth: never;
@@ -127,7 +128,7 @@ body {
     left: 0;
     width: 100vw;
     z-index: -1;
-    background-color: rgb(0, 0, 108);
+    background-color: var(--background-blue);
 }
 
 .background-image img {
@@ -169,7 +170,7 @@ h3 a {
 .footer {
     position: relative;
     width: 100%;
-    color: rgb(0, 0, 108);
+    color: var(--background-blue);
     /* font-size: clamp(0.7rem, 1.4vw, 1.1rem); */
     /* padding: 20px; */
     text-align: center;
@@ -192,25 +193,27 @@ h3 a {
 
 /* Mobile responsive styles */
 @media (max-width: 650px) {
+    html, body {
+        overflow-x: hidden;
+    }
+    
     body {
         --text-offset-x: 5vw;
-        --text-offset-y: 20vw;
+        --text-offset-y: 56vw;
         --container-size: 90vw;
         --base-font-size: 4.5vw;
+        height: auto;
+        min-height: 100vh;
     }
     
     .background-image {
-        transform: scale(2.5);
+        transform: scale(1.7);
         transform-origin: center top;
         image-rendering: -moz-crisp-edges;
         image-rendering: -webkit-optimize-contrast;
         image-rendering: crisp-edges;
         image-rendering: pixelated;
-        will-change: transform;
-        backface-visibility: hidden;
-        -webkit-backface-visibility: hidden;
-        -webkit-transform: translateZ(0);
-        transform: translateZ(0) scale(2.5);
+        overflow: hidden;
     }
     
     .background-image img {
@@ -219,20 +222,25 @@ h3 a {
         image-rendering: crisp-edges;
         image-rendering: pixelated;
         -ms-interpolation-mode: nearest-neighbor;
-        will-change: transform;
-        backface-visibility: hidden;
-        -webkit-backface-visibility: hidden;
     }
     
     .container {
-        position: relative;
+        position: absolute;
+        left: var(--text-offset-x);
+        top: var(--text-offset-y);
+        width: var(--container-size);
         z-index: 10;
-        margin-top: 75vw;
+        padding-bottom: 20vw;
     }
     
-    .footer {
+.footer {
         font-size: clamp(0.9rem, 3vw, 1.4rem);
         margin-top: 10vw;
+    }
+    
+    #circle {
+        font-size: 1.2rem !important;
+		font-weight: normal !important;
     }
 }
 
