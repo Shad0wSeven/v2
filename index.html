@@ -384,10 +384,10 @@
                 let circle = document.getElementById("circle");
                 let circle2 = document.getElementById("circle2");
                 const onMouseMove = (e) => {
-                    circle.style.left = e.pageX + "px";
-                    circle.style.top = e.pageY + "px";
-                    circle2.style.left = e.pageX + "px";
-                    circle2.style.top = e.pageY + "px";
+                    circle.style.left = e.clientX + "px";
+                    circle.style.top = e.clientY + "px";
+                    circle2.style.left = e.clientX + "px";
+                    circle2.style.top = e.clientY + "px";
                 };
                 document.addEventListener("mousemove", onMouseMove);
             </script>
