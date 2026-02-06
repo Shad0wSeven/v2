@@ -12,7 +12,8 @@
 @font-face {
     font-family: "Terminal Grotesque";
     src: url("/terminal-grotesque-webfont.eot"); /* IE9 Compat Modes */
-    src: url("/terminal-grotesque-webfont.eot?#iefix")
+    src:
+        url("/terminal-grotesque-webfont.eot?#iefix")
             format("embedded-opentype"),
         /* IE6-IE8 */ url("/terminal-grotesque-webfont.woff2") format("woff2"),
         /* Super Modern Browsers */ url("/terminal-grotesque-webfont.woff")
@@ -41,19 +42,17 @@
 } */
 
 :root {
-	--dark-color: #0d0e1c;
-	--text-color: #333333;
-	--light-color: #ffffff;
-	--highlight-color: rgba(200, 200, 200, 0.5);
-	--select-color: #000000;
-	--footer-color: #888888;
-	--background-blue: rgb(0, 0, 113);
-	
+    --dark-color: #0d0e1c;
+    --text-color: #333333;
+    --light-color: #ffffff;
+    --highlight-color: rgba(200, 200, 200, 0.5);
+    --select-color: #000000;
+    --footer-color: #888888;
+    --background-blue: rgb(0, 0, 113);
 }
 .star-container {
-	display: none;
+    display: none;
 }
-
 
 * {
     /* font-synthesis: none !important; */
@@ -67,7 +66,7 @@ img {
     visibility: visible;
 }
 /* } */
-/* 
+/*
 h1,  .backmarker {
 	text-decoration: none;
 	font-family: "Outfit", sans-serif;
@@ -86,9 +85,8 @@ h1 {
 }
 
 html {
-	/* filter: invert(); */
+    /* filter: invert(); */
 }
-
 
 html {
     margin: 0;
@@ -110,14 +108,26 @@ body {
     -moz-osx-font-smoothing: unset;
     font-smooth: never;
     font-weight: 400;
-    font-family: "Terminal Grotesque", "Code New Roman", "Helvetica Neue",
-        "HelveticaNeue", -apple-system, BlinkMacSystemFont, Inter, "Segoe UI",
-        "Helvetica", Roboto, Arial, sans-serif, "Apple Color Emoji",
-        "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family:
+        "Terminal Grotesque",
+        "Code New Roman",
+        "Helvetica Neue",
+        "HelveticaNeue",
+        -apple-system,
+        BlinkMacSystemFont,
+        Inter,
+        "Segoe UI",
+        "Helvetica",
+        Roboto,
+        Arial,
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol";
     font-size: var(--base-font-size);
     letter-spacing: -1px;
     position: relative;
-    
+
     /* Image-scaled positioning variables - adjust these to position text */
     --text-offset-x: 21vw;
     --text-offset-y: 37vw;
@@ -198,7 +208,7 @@ h3 a {
 /* Mobile responsive styles */
 @media (max-width: 650px) {
     /* Inherit from desktop - html handles scrolling */
-    
+
     body {
         --text-offset-x: 5vw;
         --text-offset-y: 56vw;
@@ -206,7 +216,7 @@ h3 a {
         --base-font-size: 4.5vw;
         min-height: 101vh; /* Slightly more than viewport to trigger Safari address bar collapse */
     }
-    
+
     .background-image {
         transform: scale(1.7);
         transform-origin: center top;
@@ -216,7 +226,7 @@ h3 a {
         image-rendering: pixelated;
         overflow: hidden;
     }
-    
+
     .background-image img {
         image-rendering: -moz-crisp-edges;
         image-rendering: -webkit-optimize-contrast;
@@ -224,7 +234,7 @@ h3 a {
         image-rendering: pixelated;
         -ms-interpolation-mode: nearest-neighbor;
     }
-    
+
     .container {
         position: absolute;
         left: var(--text-offset-x);
@@ -234,18 +244,17 @@ h3 a {
         padding-bottom: 30vh; /* Use vh to ensure enough scrollable content */
         min-height: 50vh; /* Ensure container has minimum height */
     }
-    
-.footer {
+
+    .footer {
         font-size: clamp(0.9rem, 3vw, 1.4rem);
         margin-top: 10vw;
     }
-    
+
     #circle {
         font-size: 1.2rem !important;
-		font-weight: normal !important;
+        font-weight: normal !important;
     }
 }
-
 
 a {
     color: white;
@@ -517,6 +526,14 @@ a:focus {
     top: 3px;
     animation: cardinalPixel 10s infinite steps(1);
     animation-delay: 0.5s;
+}
+
+.signature {
+    font-size: 0.9rem;
+    /*color: var(--footer-color);*/
+    /*margin-top: 10px;*/
+    text-align: right;
+    padding-right: 20px;
 }
 
 @keyframes centerPixel {
